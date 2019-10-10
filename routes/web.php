@@ -14,7 +14,15 @@ Route::get('/producto', 'PagesController@producto')->name('producto');
 
 Auth::routes();
 
+Route::resource('/miprods', 'MiprodController')->middleware('auth');
+
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+//Route::get('ejem', function () {
+   // return view('ejem');
+//})->name('ejem');
 
 Route::get('/', function () {
     return view('inicio');
@@ -48,7 +56,10 @@ Route::get('ejemplo', function () {
 
 Route::get('ejemplo2', function () {
     return view('ejemplo2');
-    });
+    })->name('ejemplo2');
 
+Route::get('mimenu', function () {
+    return view('mimenu');
+    })->name('mimenu');
 
 
