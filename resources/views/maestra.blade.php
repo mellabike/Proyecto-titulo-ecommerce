@@ -7,8 +7,26 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <title>AbastCam</title>
+    <style>  
+
+body{
+  margin-top: 30px;
+}
+.i{display: none;}
+.i{font-size: 3em;}
+a:not(last-child){
+  margin-right: 0.2em;
+}
+
+.ion-social-facebook{color: #3B5998;}
+.ion-social-twitter{color: #1DA1F2;}
+.ion-social-youtube{color: #E12B28;}
+.ion-social-googleplus{color: #DA2713;}
+.ion-social-github{color: #211F1F;}
+
+    </style>
   </head>
   <body>
     <!-- aca va  la barra de navegacion-->
@@ -23,17 +41,19 @@
             <li class="nav-item active">
             <a class="nav-link" href="{{route('quienes')}}">Contactenos <span class="sr-only">(current)</span></a>
             </li>
+            &nbsp;&nbsp;
+            <li class="nav-item active">
+                <a class="nav-link" href="{{route('politicas')}}">Politicas <span class="sr-only">(current)</span></a>
+                </li>
           </ul>
 
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+          
             &nbsp;&nbsp;&nbsp;
             <!--aqui va el login y el registro-->
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}">Inicio</a>
                     @else
                         <a href="{{ route('login') }}">INGRESAR</a>
                         &nbsp;&nbsp;
@@ -70,11 +90,23 @@
           <div class="col-sm-6">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">Politicas de AbastCam</h5>
+                <h5 class="card-title">Redes Sociales</h5>
+                <!-- politicas 
                 <p class="card-text">Politicas de registro &nbsp;&nbsp; <a href="{{route('politicas')}}" class="btn btn-primary">Ver Aqui</a></p>
                 <p class="card-text">Politicas de compra &nbsp;&nbsp;&nbsp;<a href="{{route('politicas')}}" class="btn btn-primary">Ver Aqui</a></p>
                 <p class="card-text">Politicas de venta &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{route('politicas')}}" class="btn btn-primary">Ver Aqui</a></p>
+                -->
                 
+                 <div class=".i">
+                <a class="ion-social-facebook" href="http://www.facebook.com">&nbsp;&nbsp;<span class="hidden">Facebook</span></a>
+                <br><br>
+                <a class="ion-social-twitter" href="http://www.twitter.com">&nbsp;&nbsp;<span class="hidden">Twitter</span></a>
+                <br><br>
+                <a class="ion-social-youtube" href="http://www.youtube.com">&nbsp;&nbsp;<span class="hidden">YouTube</span></a>
+                <br><br>
+                
+
+
               </div>
             </div>
           </div>
