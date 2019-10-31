@@ -81,7 +81,7 @@ a:not(last-child){
               <div class="card-body">
                 <h5 class="card-title">Que es AbastCam</h5>
                 <p class="card-text">AbastCam es un sitio destinado al comercio electrónico de accesorios y repuetso para maquinaria pesada.
-                                     fundado en  Marzo del 2019 por:<p>Francisco Mella<br>Ian Villegas​ 
+                                     fundado en  Marzo del 2019 por:<p>Marcela Paz Cepeda<br>Francisco Mella
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
                                       <a href="{{route('quienes')}}" class="btn btn-primary">Contactenos</a>
               </div>

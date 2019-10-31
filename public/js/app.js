@@ -1621,6 +1621,7 @@ module.exports = function xhrAdapter(config) {
       var username = config.auth.username || '';
       var password = config.auth.password || '';
       requestHeaders.Authorization = 'Basic ' + btoa(username + ':' + password);
+      console.log('ENTRO')
     }
 
     request.open(config.method.toUpperCase(), buildURL(config.url, config.params, config.paramsSerializer), true);
@@ -34134,7 +34135,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var me = this;
             var url = '/categoria?page=' + page + '&buscar=' + buscar + '&criterio=' + criterio;
             axios.get(url).then(function (response) {
-                var respuesta = response.data;
+                var respuesta = response.data;                
                 me.arrayCategoria = respuesta.categorias.data;
                 me.pagination = respuesta.pagination;
             }).catch(function (error) {
